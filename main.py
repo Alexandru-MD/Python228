@@ -3107,6 +3107,7 @@
 # # print(re.findall(pattern, s))
 # print(re.findall(reg, s))
 import re
+
 # # i = input("Введите строку: ")
 # # print(re.sub("о", "О", i))
 # # s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта. 9578 19_4 5"
@@ -3258,4 +3259,39 @@ import re
 # num = '+7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 74994564578'
 # reg = r'[+]*7\s*499\s*(?:\d+[-]*){3}'
 # print(re.findall(reg, num))
-print("Внесли изменения!!")
+# print("Внесли изменения!!")
+
+# p = 'Я ищу совпадения в 2023 году. И я их найду в 2 счёта.'
+# reg = r'([0-9]+)\s(\D+)'
+# print(re.search(reg, p).group())
+# m = re.search(reg, p)
+# print(m[1])
+# print(m[2])
+# print(m[0])
+# print(re.search(reg, p).group(1))
+# text = """
+# Кишинев
+# Москва
+# Самара
+# Киев
+# """
+# count = 0
+#
+
+# def repl_find(m):  # В m попадает результат, возвращение регулярного выражения!
+#     global count
+#     count += 1
+#     return f"<option value ='{count}'>{m.group(1)}</option>\n"
+#
+#
+# print(re.sub(r"\s*(\w+)\s*", repl_find, text))
+# s = "<p>изображение <img src='bg.jpg'> - Фон страницы</p>"
+# reg = r'<img\s+[^>]*src=(?P<q>[\'"])(.+)(?P=q)>'
+# print(re.findall(reg, s))
+# s = "Самолет прилетает 10/23/2023. Будем рады вас видеть после 10/24/2023."
+# ref = r'(\d{2})/(\d{2})/(\d{4})'
+# print(re.findall(ref, s))
+# print(re.sub(ref, r'\2-\1-\3', s))
+s = "google.com and google.ru"
+reg = r'(([a-z0-9_]{2,}\.)+[a-z]{2,4})'
+print(re.sub(reg, r'http://\1', s))
