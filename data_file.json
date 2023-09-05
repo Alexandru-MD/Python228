@@ -1,0 +1,19 @@
+{
+    "name": "Alex",
+    "hobbies": [
+        "running",
+        "playing",
+        "sky"
+    ],
+    "age": 20,
+    "children": [
+        {
+            "first_name": "Alice",
+            "age": 5
+        },
+        {
+            "first_name": "Demon",
+            "age": 9
+        }
+    ]
+}
