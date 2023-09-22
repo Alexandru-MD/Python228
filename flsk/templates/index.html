@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    {{ super() }}
+    <hr>
+    <h2>Список статей</h2>
+    <ul>
+        {%for p in posts %}
+        <li>
+            <p class="title">
+                <a href="{{ url_for('show_post', id_post=p.id) }}">{{ p.title }}</a>
+            </p>
+            <div class="announce">{{ p.text[:240] }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% endblock content %}

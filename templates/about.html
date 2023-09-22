@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'page.html' %}
+{% block title %}О сайте{% endblock %}
+
+
+{% block content -%}
+{{ super() }}
+<h1>{{ self.title() }}</h1>
+<p>Описание сайта</p>
+{% endblock %}
+{% block item %}
+<p class="item">{{ super() }}</p>
+{% endblock item %}

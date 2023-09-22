@@ -1,0 +1,65 @@
+body{
+    background: lightyellow;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background: orange;
+    padding: 20px;
+    margin-top: 0;
+}
+.content{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flash{
+    padding: 10px;
+}
+.flash.success{
+    border: 1px, solid, rgb(35, 245, 35);
+    background: rgb(97, 235, 97);
+}
+.flash.error{
+    border: 1px, solid, red;
+    background: rgb(243, 123, 123);
+}
+.menu a{
+    font-weight: bold;
+    color: brown;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+p>a{
+    text-decoration: none;
+    color: brown;
+}
+li>p, li div{
+    border: 1px solid grey;
+    padding: 10px 20px;
+}
+p.title{
+    margin: 0;
+    font-weight: bold;
+    background: gold;
+}
+p.title a{
+    display: block;
+}
+p.title:hover{
+    background: orange;
+}
+.announce{
+    margin-top: -1px;
+    margin-bottom: 40px;
+    background: white;
+}
