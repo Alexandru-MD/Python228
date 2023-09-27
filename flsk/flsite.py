@@ -58,7 +58,7 @@ def add_post():
             if not res:
                 flash("Ошибка добавления статьи", category='error')
             else:
-                flash("Статья добавлена успешно", category='success')
+                flash("Статья успешно добавлена", category='success')
         else:
             flash("Ошибка добавления статьи", category='error')
     return render_template('add_post.html', title="Добавление статьи", menu=dbase.get_menu())
