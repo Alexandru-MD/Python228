@@ -1,4 +1,4 @@
-# import requests
+# # import requests
 # import json
 #
 # response = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -15,7 +15,7 @@
 #
 # def ind(x):
 #     return x[1]
-#
+
 #
 # top_user = sorted(todos_by_user.items(), key=ind, reverse=True)
 # max_complete = top_user[0][1]
