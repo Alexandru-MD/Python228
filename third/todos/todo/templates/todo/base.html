@@ -12,8 +12,9 @@
     <div class="wrap">
         <ul>
             <li class="logo">Пользователь: {{ user.username }}</li>
-            <li><a href="{% url 'create_todo' %}">Создать</a></li>
-            <li><a href="{% url 'current_todos' %}">Актуальные</a></li>
+            <li><a href="{% url 'create_todo' %}">Создать задачу</a></li>
+            <li><a href="{% url 'current_todos' %}">Актуальные задачи</a></li>
+            <li><a href="{% url 'completed_todos' %}">Выполненные</a></li>
             <li>
                 <form action="{% url 'logout_user' %}" method="post">
                     {% csrf_token %}
@@ -27,6 +28,7 @@
 <div class="menu">
     <div class="wrap">
         <ul>
+            <li class="logo"><a href="{% url 'home' %}">UpService</a></li>
             <li><a href="{% url 'signup_user' %}">Зарегистрироваться</a></li>
             <li><a href="{% url 'login_user' %}">Войти</a></li>
         </ul>
