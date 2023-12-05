@@ -1,0 +1,10 @@
+{% extends 'Menu/base.html' %}
+
+{% block menu_content %}
+
+{% for root_item in root_items %}
+    {% load menu_tags %}
+    {% draw_menu root_item current_url=request.path %}
+{% endfor %}
+
+{% end block %}

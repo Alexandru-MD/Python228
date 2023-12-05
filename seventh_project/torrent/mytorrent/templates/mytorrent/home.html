@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'cd ../../css/style.css'  %}">
+</head>
+<body>
+<div class="header">
+    <div class="up-header">
+        <h1><a href="">Регистрация/Авторизация</a></h1>
+        <a href="{% url 'index' %}">Главная страница</a>
+        <a href="">Новые игры</a>
+        <a href="">По сети</a>
+        <a href="">Игры старых годов</a>
+    </div>
+    <h1><a href="{% url 'show_menu' %}">Меню</a></h1>
+</div>
+<div class="main">
+    <img src="{% static 'cd ../../mytorrent/d2-sUkqBqZ5EwvXMVRuumQ.jpeg'  %}" alt="">
+</div>
+<div class="content">
+    <div class="wrap">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

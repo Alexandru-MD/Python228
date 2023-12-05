@@ -1,0 +1,12 @@
+{% extends Menu/base.html %}
+
+<li>{{ parent_item.name }}
+    {% if child_items %}
+        <ul>
+            {% for child_item in child_items %}
+                {% load menu_tags %}
+                {% draw_menu child_item %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

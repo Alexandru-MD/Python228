@@ -1,0 +1,30 @@
+
+.up-header{
+    background: lightblue;
+    margin: 30px;
+    padding: 20px;
+    text-align: right;
+}
+.up-header a{
+    margin: 10px;
+    text-decoration: none;
+}
+.up-header h1{
+    text-align: left;
+}
+.header{
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.header a{
+    color: blue;
+}
+.header a:hover{
+    color: yellow;
+}
+.main{
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+}
