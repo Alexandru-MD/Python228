@@ -1,10 +1,10 @@
 from tkinter import *
 import random
 
-GAME_WIDTH = 700
-GAME_HEIGHT = 700
-SPEED = 150
-BODY_PARTS = 3
+GAME_WIDTH = 1000
+GAME_HEIGHT = 600
+SPEED = 130
+BODY_PARTS = 2
 SPACE_SIZE = 50
 SNAKE_COLOR = 'green'
 FOOD_COLOR = 'red'
@@ -111,8 +111,12 @@ def check_collisions():
 
 def game_over():
     canvas.delete(ALL)
-    canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=('consolas', 70), text='GAME OVER',
-                       fill='red', tag='gameover')
+    canvas.create_text(canvas.winfo_width()/2,
+                       canvas.winfo_height()/2,
+                       font=('consolas', 70),
+                       text='GAME OVER',
+                       fill='red',
+                       tag='gameover')
 
 
 window = Tk()
