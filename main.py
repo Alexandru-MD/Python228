@@ -2431,6 +2431,8 @@
 #
 # print(outer(5, 2, 3))
 # print(outer(1, 2, 3))
+
+
 ############################# Анонимные функции и lambda выражения
 # print((lambda x, y: x + y)(1, 2))
 # print('res = ', (lambda x, y: x + y)(1, 2))
@@ -2513,6 +2515,8 @@
 # d[4]()
 # minimum = (lambda a, b, c: a if a < b else b if b < c else c)
 # print(minimum(24, 11, 10))
+
+
 ################################################## Функция - map()  ####################################################
 # def mult(t):
 #     return t * 2
@@ -2587,6 +2591,8 @@
 # s = [45, 55, 60, 37, 100, 105, 220]
 # res = list(filter(lambda m: m % 15 == 0, s))
 # print(res)
+
+
 ######################################3 Декораторы #####################################################################
 # def hello():
 #     return 'Hello, i am func "hello"'
@@ -6242,4 +6248,36 @@
 
 # ======================================================================================================================
 
+# import threading
+#
+#
+# def print_x(x, n):
+#     for i in range(n):
+#         print(x)
+#
+#
+# # def print_two():
+# #     for i in range(10):
+# #         print(2)
+#
+#
+# if __name__ == "__main__":
+#     # create threads
+#     t1 = threading.Thread(target=print_x, args=(1, 5,))
+#     t2 = threading.Thread(target=print_x, args=(2, 10,))
+#
+#     # start thread
+#     t1.start()
+#     t2.start()
+#
+#     # wait until thread 1 is completely executed
+#     t1.join()
+#     # wait until thread 2 is completely executed
+#     t2.join()
+#     # both threads completely executed
+#
+#     print("Done!")
 
+# ===================================================      NUMPY  ===================================================
+
+# Функции Numpy array() принимают список элементов в качестве аргумента и возвращают одномерный массив.

@@ -546,6 +546,9 @@
 # name = "Игорь"
 # age = 28
 # per = {"name": "Игорь", 'age': 28}
+
+
+# =================================================================
 # class Person:
 #     def __init__(self, name, age):
 #         self.__name = name
@@ -946,6 +949,72 @@
 # except smtplib.SMTPAuthenticationError:
 #     print('unable to sign in')
 
-#=======================================================================================================================
+# ================================================
+
+# class TriangleChecker:
+#     def __init__(self, sides):
+#         self.sides = sides
+#
+#     def is_triangle(self):
+#         if all(isinstance(side, (int, float)) for side in self.sides):
+#             if all(side > 0 for side in self.sides):
+#                 sorted_sides = sorted(self.sides)
+#                 if sorted_sides[0] + sorted_sides[1] > sorted_sides[2]:
+#                     return "Ура можно построить треугольник"
+#                 return 'Жаль, из этого треугольник не сделать'
+#             return 'Отрицательные числа нельзя'
+#         return 'Только числа'
+#
+#
+# triangle = TriangleChecker([2, 3, 4])
+# print(triangle.is_triangle())
+
+# ========================================================
 
 
+# class KgToPounds:
+#     def __init__(self, kg):
+#         self.__kg = kg
+#
+#     def to_pounds(self):
+#         return self.__kg * 2.205
+#
+#     @property
+#     def kg(self):
+#         return self.__kg
+#
+#     @kg.setter
+#     def kg(self, new_kg):
+#         if isinstance(new_kg, (int, float)):
+#             self.__kg = new_kg
+#
+#
+# kgtopounds = KgToPounds(55)
+# print(kgtopounds.to_pounds())
+
+
+# def triangle(n):
+#     for i in range(1, n + 1):
+#         print(" " * (n - i) + " *" * i)
+#
+#
+# triangle(10)
+
+
+from abc import ABC, abstractmethod
+
+
+class Piece(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+
+
+class Queen(Piece):
+    def move(self):
+        print("Ход ферзя")
+
+
+a = Piece()
+b = Queen()
+a.move(), b.move()

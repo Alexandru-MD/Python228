@@ -4,7 +4,7 @@ import random
 GAME_WIDTH = 1000
 GAME_HEIGHT = 600
 SPEED = 130
-BODY_PARTS = 2
+BODY_PARTS = 100
 SPACE_SIZE = 50
 SNAKE_COLOR = 'green'
 FOOD_COLOR = 'red'
@@ -26,7 +26,6 @@ class Snake:
 
 
 class Food:
-
     def __init__(self):
         x = random.randint(0, (GAME_WIDTH / SPACE_SIZE) - 1) * SPACE_SIZE
         y = random.randint(0, (GAME_HEIGHT / SPACE_SIZE) - 1) * SPACE_SIZE
